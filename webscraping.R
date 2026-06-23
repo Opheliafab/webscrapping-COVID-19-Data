@@ -116,7 +116,15 @@ second_country <- my_data[my_data[, 'country'] == "United Kingdom",
                           c("country", "confirmed", "confirmed.population.ratio")]
 second_country
 
+# Use if-else statement to determine if the US or the UK has a greater ratio of confirmed cases to population
+uk <- second_country$confirmed.population.ratio
+us <- first_country$confirmed.population.ratio
 
+if (us > uk) {
+  print("United States is greater")
+} else {
+  print("United Kingdom is greater")
+}
 
 #finding out which country has a confirmed to population ratio less than 1% as it may 
 #indicate that the risk of those countries is comparatively low
